@@ -4,6 +4,12 @@
 
 body{
     font-family: sans-serif;
+    background-image: url("img/bg-kelas.jpg");
+    background-size: cover;
+}
+
+img{
+    width: 50px;
 }
 
 .flex-container-column{
@@ -11,7 +17,7 @@ body{
     flex-direction: column;
 
     /* Properti pendukung */
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: right;
 }
@@ -38,7 +44,7 @@ body{
 
 .button:hover{
     font-weight: bold;
-    color: #1c1c1c;
+    color: #ffffff;
 }
 
 .double{
@@ -50,7 +56,8 @@ body{
 }
 
 .validate{
-    background: #ff9500;
+    background: green;
+    color: white;
 }
 
 .clear{
@@ -75,7 +82,8 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
     border-radius: 5px;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    opacity: 0.98;
 }
 
 @media screen and (max-width: 513px){
@@ -100,16 +108,21 @@ th, td{
 }
 
 th{
-    background-color: #ff9500;
+    background-color: #35d461;
     color: #1c1c1c;
 }
 
+.right{
+    background-color: #f99d07;
+} 
+
 tr .displayNumber{
-    margin-inline: 40px;
+    margin-right: 38px;
+    margin-left: 38px;
 }
 
 tr .displayResult{
-    background-color: #505050;
+    background-color: #37b6f6;
     color: white;
 }
 
