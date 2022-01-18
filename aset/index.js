@@ -85,15 +85,15 @@ disNum.forEach((disN, indexNum) => {
     });
 });
 
-disRes[0].focus();
+disRes[0];
 disRes.forEach((disR, indexRes) => {
     disR.addEventListener('keydown', (e) => {
         if(e.key >= 0 && e.key <= 9){
             disRes[indexRes].value = '';
-            setTimeout(() => disRes[indexRes + 1].focus(), 10);
+            setTimeout(() => disRes[indexRes + 1], 10);
         }
         else if(e.key === 'Backspace'){
-            setTimeout(() => disRes[indexRes - 1].focus(), 10);
+            setTimeout(() => disRes[indexRes - 1], 10);
         }
     });
 });
