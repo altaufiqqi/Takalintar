@@ -6,158 +6,240 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takalintar</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="aset/style.css">
+    <link rel="stylesheet" href="aset/bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="text-center mt-4">
         <h1>Tabel Perkalian Pintar (Takalintar)</h1>
+        <p id="alert"></p>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-8 self">
-            <div class="text-center card m-4 p-4">
-                <table class="table-primary table-bordered">
-                    <!-- Tabel Baris 1 -->
-                    <thead>
-                        <tr>
-                            <td>
-                            </td>
-                            <th>
-                                <input type="number" class="displayInitiate" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <th>
-                                <input type="number" class="displayInitiate" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <th>
-                                <input type="number" class="displayInitiate" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <td>
-                                <h1><span>x</span></h1>
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Tabel Baris 2 -->
-                        <tr>
-                            <th class="displayResult">
-                                <input type="number" class="displayRes" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <td>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                            </td>
-                            <td>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                            </td>
-                            <td>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                            </td>
-                            <th>
-                                <input type="number" class="displayInitiate" placeholder="-" min="0" max="9" required>
-                            </th>
-                        </tr>
-                        <!-- Tabel Baris 3 -->
-                        <tr>
-                            <th class="displayResult">
-                                <input type="number" class="displayRes" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <td>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                            </td>
-                            <td>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                            </td>
-                            <td>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                                <input type="number" class="displayNumber" placeholder="-" min="0" max="9" required>
-                            </td>
-                            <th>
-                                <input type="number" class="displayInitiate" placeholder="-" min="0" max="9" required>
-                            </th>
-                        </tr>
-                        <!-- Tabel Baris 4 -->
-                        <tr>
-                            <th class="displayResult">
-                                <input type="number" class="displayRes" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <td>
-                                <input type="number" class="displayNumber dispLeft" placeholder="-" min="0" max="9"
-                                    required>
-                                <input type="number" class="displayNumber dispRight" placeholder="-" min="0" max="9"
-                                    required>
-                            </td>
-                            <td>
-                                <input type="number" class="displayNumber dispLeft" placeholder="-" min="0" max="9"
-                                    required>
-                                <input type="number" class="displayNumber dispRight" placeholder="-" min="0" max="9"
-                                    required>
-                            </td>
-                            <td>
-                                <input type="number" class="displayNumber dispLeft" placeholder="-" min="0" max="9"
-                                    required>
-                                <input type="number" class="displayNumber dispRight" placeholder="-" min="0" max="9"
-                                    required>
-                            </td>
-                            <th>
-                                <input type="number" class="displayInitiate" placeholder="-" min="0" max="9" required>
-                            </th>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <!-- Tabel Baris 5 -->
-                        <tr>
-                            <td></td>
-                            <th class="displayResult">
-                                <input type="number" class="displayRes" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <th class="displayResult">
-                                <input type="number" class="displayRes" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <th class="displayResult">
-                                <input type="number" class="displayRes" placeholder="-" min="0" max="9" required>
-                            </th>
-                            <td></td>
-                        </tr>
-                    </tfoot>
-                </table>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="text-center card m-4 p-4 table-responsive">
+                    <table class="table-primary table-bordered">
+                        <!-- Tabel Baris 1 -->
+                        <thead>
+                            <tr>
+                                <td>
+                                    <img src="aset/img/muslim-nobg.png" alt="">
+                                </td>
+                                <th>
+                                    <input type="number" id="dispIn1" class="displayInitiate" value="value1"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <th>
+                                    <input type="number" id="dispIn2" value="value2" class="displayInitiate"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <th>
+                                    <input type="number" id="dispIn3" value="dispIn3" class="displayInitiate"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <td>
+                                    <h1><span>x</span></h1>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Tabel Baris 2 -->
+                            <tr>
+                                <th class="displayResult">
+                                    <input type="number" id="dispRes1" value="dispRes1" class="displayRes"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum1" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum2" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum3" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum4" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum5" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum6" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th class="right">
+                                    <input type="number" id="dispIn4" value="dispIn4" class="displayInitiate"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                            </tr>
+                            <!-- Tabel Baris 3 -->
+                            <tr>
+                                <th class="displayResult">
+                                    <input type="number" id="dispRes2" value="dispRes2" class="displayRes"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum7" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum8" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum9" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum10" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum11" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum12" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th class="right">
+                                    <input type="number" id="dispIn5" value="dispIn5" class="displayInitiate"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                            </tr>
+                            <!-- Tabel Baris 4 -->
+                            <tr>
+                                <th class="displayResult">
+                                    <input type="number" id="dispRes3" value="dispRes3" class="displayRes"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum13" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum14" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum15" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum16" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" id="dispNum17" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                        <div class="d-flex flex-row-reverse">
+                                            <input type="number" id="dispNum18" class="displayNumber" placeholder="-"
+                                                min="0" max="9" required>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th class="right">
+                                    <input type="number" id="dispIn6" value="dispIn6" class="displayInitiate"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <!-- Tabel Baris 5 -->
+                            <tr>
+                                <td></td>
+                                <th class="displayResult">
+                                    <input type="number" id="dispRes4" value="dispRes4" class="displayRes"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <th class="displayResult">
+                                    <input type="number" id="dispRes5" value="dispRes5" class="displayRes"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <th class="displayResult">
+                                    <input type="number" id="dispRes6" value="dispRes6" class="displayRes"
+                                        placeholder="-" min="0" max="9" required>
+                                </th>
+                                <td><img src="aset/img/muslimah-nobg.png" alt=""></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card m-4 p-4">
+                    <!-- <div class="row">
+                        <div class="button">1</div>
+                        <div class="button">2</div>
+                        <div class="button">3</div>
+                        <div class="button">4</div>
+                        <div class="button">5</div>
+                    </div>
+                    <div class="row">
+                        <div class="button">6</div>
+                        <div class="button">7</div>
+                        <div class="button">8</div>
+                        <div class="button">9</div>
+                        <div class="button">0</div>
+                    </div>
+                    <div class="row">
+                        <div class="button all-clear double">Hapus Semua</div>
+                        <div class="button clear double">Hapus</div>
+                    </div> -->
+                    <div class="row">
+                        <button class="button all-clear all mb-2" onclick="clearValue()">Hapus
+                            Semua!</button>
+                        <button class="button validate all" id="validasi">Cocokkan!</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-6">
-            <div class="card m-4 p-4">
-                <div class="row">
-                    <div class="button">1</div>
-                    <div class="button">2</div>
-                    <div class="button">3</div>
-                    <div class="button">4</div>
-                    <div class="button">5</div>
-                </div>
-                <div class="row">
-                    <div class="button">6</div>
-                    <div class="button">7</div>
-                    <div class="button">8</div>
-                    <div class="button">9</div>
-                    <div class="button">0</div>
-                </div>
-                <div class="row">
-                    <div class="button all-clear double">Hapus Semua</div>
-                    <div class="button clear double">Hapus</div>
-                </div>
-                <div class="row">
-                    <div class="button validate all next">Cocokkan</div>
-                </div>
-            </div>
-        </div>
     </div>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-<script src="index.js"></script>
+<script src="aset/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="aset/index.js"></script>
 
 </html>
