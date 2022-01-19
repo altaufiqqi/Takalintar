@@ -2,6 +2,17 @@ const disInit = document.querySelectorAll('.displayInitiate');
 const disNum = document.querySelectorAll('.displayNumber');
 const disRes = document.querySelectorAll('.displayRes');
 
+function byId(e){
+    return document.getElementById(e);
+}
+function newEl(tag){
+    return document.createElement(tag);
+}
+function newTxt(txt){
+    return document.createTextNode(txt);
+}
+
+
 disInit[0].focus();
 disInit.forEach((disI, index) => {
     disI.addEventListener('keydown', (e) => {
@@ -41,16 +52,6 @@ disRes.forEach((disR, indexRes) => {
     });
 });
 
-function byId(e){
-    return document.getElementById(e);
-}
-function newEl(tag){
-    return document.createElement(tag);
-}
-function newTxt(txt){
-    return document.createTextNode(txt);
-}
-
 window.addEventListener('load', mInit, false);
 
 function mInit()
@@ -74,25 +75,6 @@ function onBtnClick()
     var result4 = document.getElementById('dispRes4').value;
     var result5 = document.getElementById('dispRes5').value;
     var result6 = document.getElementById('dispRes6').value;
-    
-    var num1 = document.getElementById('dispNum1').value;
-    var num2 = document.getElementById('dispNum2').value;
-    var num3 = document.getElementById('dispNum3').value;
-    var num4 = document.getElementById('dispNum4').value;
-    var num5 = document.getElementById('dispNum5').value;
-    var num6 = document.getElementById('dispNum6').value;
-    var num7 = document.getElementById('dispNum7').value;
-    var num8 = document.getElementById('dispNum8').value;
-    var num9 = document.getElementById('dispNum9').value;
-    var num10 = document.getElementById('dispNum10').value;
-    var num11 = document.getElementById('dispNum11').value;
-    var num12 = document.getElementById('dispNum12').value;
-    var num13 = document.getElementById('dispNum13').value;
-    var num14 = document.getElementById('dispNum14').value;
-    var num15 = document.getElementById('dispNum15').value;
-    var num16 = document.getElementById('dispNum16').value;
-    var num17 = document.getElementById('dispNum17').value;
-    var num18 = document.getElementById('dispNum18').value;
 
     var totalValue1 = value1 + value2 + value3;
     var totalValue2 = value4 + value5 + value6;
@@ -100,15 +82,7 @@ function onBtnClick()
 
     var multipleResult = totalValue1 * totalValue2;
 
-    var line1 = parseInt(num1);
-    var line2 = parseInt(num2) + parseInt(num3) + parseInt(num7);
-    console.log(line2)
-    var line3 = parseInt(num4) + parseInt(num5) + parseInt(num8) + parseInt(num9) + parseInt(num13);
-    var line4 = parseInt(num6) + parseInt(num10) + parseInt(num11) + parseInt(num14) + parseInt(num15);
-    var line5 = parseInt(num12) + parseInt(num16) + parseInt(num17);
-    var line6 = parseInt(num18);
-
-    if (multipleResult == totalResult && multipleResult != "" && line1 == result1 && line2 == result2 && line3 == result3 && line4 == result4 && line5 == result5 && line6 == result6) {
+    if (multipleResult == totalResult && multipleResult != "") {
       alert ("Selamat! Perhitungan Kamu Benar!");
     } else {
         alert ("Wah, Perhitungan Kamu Masih Belum Tepat. Yuk Diperiksa Lagi!");
