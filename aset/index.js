@@ -66,19 +66,19 @@ function onBtnClick()
     var value3 = document.getElementById('dispIn3').value;
     
     var value4 = document.getElementById('dispIn4').value;
-    var value5 = document.getElementById('dispIn5').value;
-    var value6 = document.getElementById('dispIn6').value;
+    // var value5 = document.getElementById('dispIn5').value;
+    // var value6 = document.getElementById('dispIn6').value;
 
     var result1 = document.getElementById('dispRes1').value;
     var result2 = document.getElementById('dispRes2').value;
     var result3 = document.getElementById('dispRes3').value;
     var result4 = document.getElementById('dispRes4').value;
-    var result5 = document.getElementById('dispRes5').value;
-    var result6 = document.getElementById('dispRes6').value;
+    // var result5 = document.getElementById('dispRes5').value;
+    // var result6 = document.getElementById('dispRes6').value;
 
-    var totalValue1 = value1 + value2 + value3;
-    var totalValue2 = value4 + value5 + value6;
-    var totalResult = result1 + result2 + result3 + result4 + result5 + result6;
+    var totalValue1 = value1 + value2;
+    var totalValue2 = value3 + value4;
+    var totalResult = result1 + result2 + result3 + result4;
 
     var multipleResult = totalValue1 * totalValue2;
 
@@ -99,15 +99,15 @@ function clearValue(){
     document.getElementById('dispIn3').value = '';
     
     document.getElementById('dispIn4').value = '';
-    document.getElementById('dispIn5').value = '';
-    document.getElementById('dispIn6').value = '';
+    // document.getElementById('dispIn5').value = '';
+    // document.getElementById('dispIn6').value = '';
 
     document.getElementById('dispRes1').value = '';
     document.getElementById('dispRes2').value = '';
     document.getElementById('dispRes3').value = '';
     document.getElementById('dispRes4').value = '';
-    document.getElementById('dispRes5').value = '';
-    document.getElementById('dispRes6').value = '';
+    // document.getElementById('dispRes5').value = '';
+    // document.getElementById('dispRes6').value = '';
 
     document.getElementById('dispNum1').value = '';
     document.getElementById('dispNum2').value = '';
@@ -117,14 +117,14 @@ function clearValue(){
     document.getElementById('dispNum6').value = '';
     document.getElementById('dispNum7').value = '';
     document.getElementById('dispNum8').value = '';
-    document.getElementById('dispNum9').value = '';
-    document.getElementById('dispNum10').value = '';
-    document.getElementById('dispNum11').value = '';
-    document.getElementById('dispNum12').value = '';
-    document.getElementById('dispNum13').value = '';
-    document.getElementById('dispNum14').value = '';
-    document.getElementById('dispNum15').value = '';
-    document.getElementById('dispNum16').value = '';
-    document.getElementById('dispNum17').value = '';
-    document.getElementById('dispNum18').value = '';
+    // document.getElementById('dispNum9').value = '';
+    // document.getElementById('dispNum10').value = '';
+    // document.getElementById('dispNum11').value = '';
+    // document.getElementById('dispNum12').value = '';
+    // document.getElementById('dispNum13').value = '';
+    // document.getElementById('dispNum14').value = '';
+    // document.getElementById('dispNum15').value = '';
+    // document.getElementById('dispNum16').value = '';
+    // document.getElementById('dispNum17').value = '';
+    // document.getElementById('dispNum18').value = '';
 }
